@@ -6,6 +6,8 @@ While I was working I got a request to create a documentation on NestJS APIs
 
 This repository is born out of that request, hosting the code I've created while learning how to use **swagger** with **nestjs**.
 
+I also explored some usage of **JSDocs** and it's integration with nestjs & swagger-ui!
+
 All endpoints were created using NestJS command: `nest g resource <resource_name>`
 
 ## Installation & Running

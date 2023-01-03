@@ -1,23 +1,26 @@
-import { ApiProperty } from '@nestjs/swagger';
-
 // ApiProperty is used to make DTO content available at the Schema section of the API
+//   but I prefer not to use it, since it kinda pollutes all DTOs with these imports & decorators
+// I will stick with the approach of using JSDocs, integrating it as a plugin, in which in the end
+//   will have the same result as using ApiProperty, but also providing these infos while in the IDE
+//   which is something that if you use ApiProperty you won't have!
+// import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserDto {
-  @ApiProperty({
-    description: 'User name',
-    example: 'John Doe',
-  })
-  name: string;
+  /**
+   * User name
+   * @example "John Doe"
+   */
+  name?: string;
 
-  @ApiProperty({
-    description: 'User email',
-    example: 'johndoe@gmail.com',
-  })
+  /**
+   * User email
+   * @example johndoe@gmail.com
+   */
   email: string;
 
-  @ApiProperty({
-    description: 'User password',
-    example: '$uper$ecretPassword',
-  })
+  /**
+   * User password
+   * @example $uper$ecretPassword
+   */
   password: string;
 }
