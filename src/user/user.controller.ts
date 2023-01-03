@@ -12,6 +12,8 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ApiTags } from '@nestjs/swagger';
 
+// ApiTags is used to create a tag section on the docs for one controller
+// in which all endpoints of this controller will be under it's hood
 @ApiTags('user')
 @Controller('user')
 export class UserController {
