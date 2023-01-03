@@ -2,8 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
+/**
+ * This service is responsible for CRUD Operations for users
+ */
 @Injectable()
 export class UserService {
+  /**
+   * Creates a new user
+   * @param createUserDto the user data
+   */
   create(createUserDto: CreateUserDto) {
     return 'This action adds a new user';
   }
